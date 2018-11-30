@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Copied from https://github.com/apache/zeppelin/blob/4e7d8170d01a1158aeae53820f40fc9823a79c0e/k8s/interpreter/100-interpreter-spec.yaml
 kind: Pod
 apiVersion: v1
 metadata:
