@@ -1,0 +1,5 @@
+com\example\k8s\fabric8\Kubectl$1.class
+com\example\k8s\fabric8\Kubectl.class
+com\example\k8s\fabric8\KubectlTestRunner.class
+com\example\k8s\fabric8\Kubectl$2.class
+com\example\k8s\fabric8\K8sSpecTemplate.class
