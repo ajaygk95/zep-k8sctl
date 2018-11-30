@@ -14,7 +14,7 @@ Class takes 2 arguments
 * args2 --> <no-value>|apply|delete. <no-value> will perform both apply and delete.
   Example spec file and property file is available under zeppelin-spec-handler/src/main/resources folder
 
-### PortForward method is available in Kubectl.java but not invoked in this TestRunner. You can invoke this method if portForwarding is needed.
+###### PortForward method is available in Kubectl.java but not invoked in this TestRunner. You can invoke this method if portForwarding is needed.
 
 
 References: 
@@ -29,4 +29,5 @@ References:
 
 ## How to execute 
 RUN 
-java -cp zeppelin-spec-handler-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.example.k8s.fabric8.KubectlTestRunner zeppelin-spec-handler/src/main/resources/100-interpreter-spec.yaml zeppelin-spec-handler/src/main/resources/test-spec.properties
+
+`java -cp zeppelin-spec-handler-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.example.k8s.fabric8.KubectlTestRunner zeppelin-spec-handler/src/main/resources/100-interpreter-spec.yaml zeppelin-spec-handler/src/main/resources/test-spec.properties`
