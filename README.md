@@ -1,5 +1,5 @@
 
-* This code is written to check if kubectl -f commands can be achieved through io.fabric8 APIs *
+## This code is written to check if kubectl -f commands can be achieved through io.fabric8 APIs 
 
 This approach enables JAVA programs to not use exec or other methods to programmatically work with K8S.
 When using any execute command approach, 'kubectl' binary becomes a dependency.
@@ -25,9 +25,11 @@ References: https://github.com/apache/zeppelin/pull/3240
 https://github.com/fabric8io/kubernetes-client/tree/master/kubernetes-examples
 https://github.com/apache/spark/search?p=2&q=fabric8&unscoped_q=fabric8
 
-* How to build *
+## How to build 
 1. Clone Repositry
 2. Edit K8S_NAMESPACE (in KubectlTestRunner.java) and K8_URL(in Kubectl.java) as per K8S environment
 3. RUN mvn clean package
 
-* How to execute *
+## How to execute 
+RUN 
+java -cp zeppelin-spec-handler-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.example.k8s.fabric8.KubectlTestRunner zeppelin-spec-handler/src/main/resources/100-interpreter-spec.yaml zeppelin-spec-handler/src/main/resources/test-spec.properties
