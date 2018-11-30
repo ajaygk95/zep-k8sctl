@@ -13,6 +13,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ * Copied from https://github.com/apache/zeppelin/blob/4e7d8170d01a1158aeae53820f40fc9823a79c0e/zeppelin-plugins/launcher/k8s-standard/src/main/java/org/apache/zeppelin/interpreter/launcher/K8sSpecTemplate.java
  */
 
 package com.example.k8s.fabric8;
