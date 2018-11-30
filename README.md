@@ -8,22 +8,19 @@ fabric8 APIs are very useful in removing this dependency and the java project ca
 Test runner class for kubectl -f apply/delete/watch/portFwd using io.fabric8
 Other classes like K8sSpecTemplate is used as is.
 
-Class takes 2 args. arg0 --> 100-spec-interpreter.yaml file path arg1 -->
-properties file path used in template rendering args2 -->
-<no-value>|apply|delete K8S_NAMESPACE (in KubectlTestRunner.java) and
-K8_URL(in Kubectl.java) are hard-coded, change as needed.
+Class takes 2 arguments
+* arg0 --> 100-spec-interpreter.yaml file path 
+* arg1 --> properties file path used in template rendering
+* args2 --> <no-value>|apply|delete. <no-value> will perform both apply and delete.
+  Example spec file and property file is available under zeppelin-spec-handler/src/main/resources folder
+
+### PortForward method is available in Kubectl.java but not invoked in this TestRunner. You can invoke this method if portForwarding is needed.
 
 
-In K8SRemoteInterpreterProcess.java when "start" method is called the apply
-and portForward is being invoked. PortForward method is available in
-Kubectl.java but not invoked in this TestRunner.
-
-
-This testCode is written to check if kubectl as used in
-https://github.com/apache/zeppelin/pull/3240 can be replaced with Java Api's.
-References: https://github.com/apache/zeppelin/pull/3240
-https://github.com/fabric8io/kubernetes-client/tree/master/kubernetes-examples
-https://github.com/apache/spark/search?p=2&q=fabric8&unscoped_q=fabric8
+References: 
+* https://github.com/apache/zeppelin/pull/3240
+* https://github.com/fabric8io/kubernetes-client/tree/master/kubernetes-examples
+* https://github.com/apache/spark/search?p=2&q=fabric8&unscoped_q=fabric8
 
 ## How to build 
 1. Clone Repositry
