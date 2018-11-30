@@ -13,6 +13,7 @@ Class takes 3 arguments
 * arg1 --> properties file path used in template rendering
 * args2 --> \<no-value\>|apply|delete. <no-value> will perform both apply and delete.
   Example spec file and property file is available under zeppelin-spec-handler/src/main/resources folder
+  For template rendering jinjava is used.
 
 ###### PortForward method is available in Kubectl.java but not invoked in this TestRunner. You can invoke this method if portForwarding is needed.
 
