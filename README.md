@@ -8,10 +8,10 @@ fabric8 APIs are very useful in removing this dependency and the java project ca
 Test runner class for kubectl -f apply/delete/watch/portFwd using io.fabric8
 Other classes like K8sSpecTemplate is used as is.
 
-Class takes 2 arguments
+Class takes 3 arguments
 * arg0 --> 100-spec-interpreter.yaml file path 
 * arg1 --> properties file path used in template rendering
-* args2 --> <no-value>|apply|delete. <no-value> will perform both apply and delete.
+* args2 --> \<no-value\>|apply|delete. <no-value> will perform both apply and delete.
   Example spec file and property file is available under zeppelin-spec-handler/src/main/resources folder
 
 ###### PortForward method is available in Kubectl.java but not invoked in this TestRunner. You can invoke this method if portForwarding is needed.
