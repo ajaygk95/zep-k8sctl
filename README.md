@@ -23,11 +23,13 @@ References:
 * https://github.com/apache/zeppelin/pull/3240
 * https://github.com/fabric8io/kubernetes-client/tree/master/kubernetes-examples
 * https://github.com/apache/spark/search?p=2&q=fabric8&unscoped_q=fabric8
+* https://github.com/fabric8io/kubernetes-client/pull/1300
 
 ## How to build 
-1. Clone Repositry
+1. Clone Repositryu
 2. Edit K8S_NAMESPACE (in KubectlTestRunner.java) and K8_URL(in Kubectl.java) as per K8S environment
 3. RUN mvn clean package
+4. kubectl.resourceList(result).createOrReplace(); only works with latest io.fabric8-kubernetes-client (master branch). [#1300](https://github.com/fabric8io/kubernetes-client/pull/1300) is merged to master branch I hope it ll be available in the next release of fabric8io/kubernetes-client.
 
 ## How to execute 
 RUN 

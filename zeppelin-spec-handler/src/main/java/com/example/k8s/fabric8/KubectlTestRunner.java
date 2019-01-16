@@ -29,7 +29,7 @@ import org.apache.log4j.Logger;
  * Test runner class for kubectl -f apply/delete/watch/portFwd using io.fabric8
  * Other classes like K8sSpecTemplate is used as is.
  *
- * Class takes 2 args. arg0 --> 100-spec-interpreter.yaml file path arg1 -->
+ * Class takes 3 args. arg0 --> 100-spec-interpreter.yaml file path arg1 -->
  * properties file path used in template rendering args2 -->
  * <no-value>|apply|delete K8S_NAMESPACE (in KubectlTestRunner.java) and
  * K8_URL(in Kubectl.java) are hard-coded, change as needed.
@@ -49,7 +49,7 @@ import org.apache.log4j.Logger;
  */
 public class KubectlTestRunner {
 	private static final Logger LOGGER = Logger.getLogger(KubectlTestRunner.class);
-	private static final String K8S_NAMESPACE = "ag";
+	private static final String K8S_NAMESPACE = "zeppelin";
 
 	public static void main(String[] args) throws Exception {
 		if (args.length < 2) {
@@ -65,7 +65,7 @@ public class KubectlTestRunner {
 			K8sSpecTemplate specTemplate = new K8sSpecTemplate();
 			specTemplate.loadProperties(properties);
 			String spec = specTemplate.render(interpreter_spec_file);
-
+			LOGGER.trace(spec);
 			// Apply kubectl action
 			String action = new String("all");
 			if (args.length > 2 && !args[2].isEmpty()) {
@@ -97,6 +97,7 @@ public class KubectlTestRunner {
 			break;
 		default:
 			LOGGER.error("No default case present");
+			kubectl.close();
 			break;
 		}
 		kubectl.wait("knobby-elk-zeppelin-6d94bf8b76-pk6k8");
